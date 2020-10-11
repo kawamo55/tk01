@@ -28,6 +28,6 @@ tmloop()
 rt.mainloop()
 
 # reset pin
-for i in range(0,4):
+for i in range(0,len(pino)):
     wir.digitalWrite(pino[i],0)
 
