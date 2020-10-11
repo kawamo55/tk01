@@ -13,10 +13,10 @@ btn.pack()
 
 # control pin and time span
 pino=[17,18,22,23]
-tspn=200
+tspn=300
 
 def tmloop():
-    r=np.random.randint(15)
+    r=np.random.randint((1 << len(pino))-1)
     for i in range(0,4):
         if (r & (1 << i)):
            wir.digitalWrite(pino[i],1)
