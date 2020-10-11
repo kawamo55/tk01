@@ -15,6 +15,10 @@ btn.pack()
 pino=[17,18,22,23]
 tspn=300
 
+# set pin
+for i in range(0,len(pino)):
+    wir.pinMode(pino[i],wir.GPIO.OUTPUT)
+
 def tmloop():
     r=np.random.randint((1 << len(pino))-1)
     for i in range(0,4):
